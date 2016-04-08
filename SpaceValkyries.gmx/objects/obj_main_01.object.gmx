@@ -49,11 +49,11 @@
             <kind>1</kind>
             <string>vpressed = false
 if(keyboard_check(ord('W')) || keyboard_check(vk_up)){
-    
+    if(y - 5 &gt;= 0) vspeed = -5
     vpressed = true
 }
 else if(keyboard_check(ord('S')) || keyboard_check(vk_down)){
-    if(x + sprite_width &lt;= 650) vspeed=5
+    if(y + sprite_width + 5 &lt;= window_get_height()) vspeed=5
     vpressed = true
 }
 else{
@@ -62,32 +62,23 @@ else{
     }
 }
 
-if(y + sprite_width &gt; window_get_height()){
-    y = window_get_height() - (sprite_width)
-    vspeed = 0
-}
-else if (y &lt; 0)
-{
-    y = 0
-    vspeed = 0
-}
-
 hpressed = false
 if(keyboard_check(ord('A')) || keyboard_check(vk_left)){
-   if(y 
-   hspeed=-5
+   if(x - 5 &gt;= 0) hspeed=-5
    hpressed = true
 }
 else if(keyboard_check(ord('D')) || keyboard_check(vk_right)){
-    if(x &gt;= 0) vspeed=-5
-    hspeed=5
+    if(x + sprite_width + 5 &lt;= 650) hspeed = 5
     hpressed = true
 }
-else{
-    if(!hpressed){
-        hspeed = 0
-    }
+else if(!hpressed){
+    hspeed = 0
 }
+
+if(x - 5 &lt; 0){
+    x = 0
+}
+else if(x + sprite_width + 5 &gt; 650) x = 650 - sprite_width
 
 
 </string>
