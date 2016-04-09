@@ -12,9 +12,22 @@
     <background>background\bg_main</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="Main_Movement">
+      <script>scripts\Ship_Input.gml</script>
+      <script>scripts\Ship_Movement.gml</script>
+      <script>scripts\Ship_Weapons.gml</script>
+    </scripts>
+  </scripts>
   <objects name="objects">
-    <object>objects\obj_main_01</object>
-    <object>objects\obj_abs_ship</object>
+    <objects name="Ships">
+      <object>objects\obj_abs_ship</object>
+      <object>objects\obj_main_01</object>
+    </objects>
+    <objects name="Projectiles">
+      <object>objects\obj_abs_proj</object>
+      <object>objects\obj_main_missle_01</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
