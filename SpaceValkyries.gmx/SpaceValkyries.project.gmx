@@ -18,16 +18,22 @@
       <script>scripts\Ship_Movement.gml</script>
       <script>scripts\Ship_Weapons.gml</script>
     </scripts>
+    <script>scripts\Collision.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Ships">
       <object>objects\obj_abs_ship</object>
       <object>objects\obj_main_01</object>
+      <objects name="Enemies">
+        <object>objects\obj_abs_ene_ship</object>
+        <object>objects\obj_ene_01</object>
+      </objects>
     </objects>
     <objects name="Projectiles">
       <object>objects\obj_abs_proj</object>
       <object>objects\obj_main_missle_01</object>
     </objects>
+    <object>objects\obj_director</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
