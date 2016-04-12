@@ -7,6 +7,8 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\sp_p_ship_01</sprite>
+    <sprite>sprites\sp_ene_ship_01</sprite>
+    <sprite>sprites\sp_missle_01_temp</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_main</background>
@@ -19,6 +21,10 @@
       <script>scripts\Ship_Weapons.gml</script>
     </scripts>
     <script>scripts\Collision.gml</script>
+    <script>scripts\Objects_Test.gml</script>
+    <scripts name="Create_Enemies">
+      <script>scripts\Create_Ene_01.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Ships">
