@@ -1,6 +1,6 @@
 vpressed = false
 if(keyboard_check(ord('W')) || keyboard_check(vk_up)){
-    if(y - 5 >= 0) vspeed = -5
+    if(y - 105 >= 0) vspeed = -5
     vpressed = true
 }
 else if(keyboard_check(ord('S')) || keyboard_check(vk_down)){
@@ -26,9 +26,9 @@ else if(!hpressed){
     hspeed = 0
 }
 
-if(x - 5 < 0){
-    x = 0
-}
+if(x - 5 < 0){ x = 0}
 else if(x + sprite_width + 5 > 650) x = 650 - sprite_width
+if(y - 105 < 0) y = 100
+else if(y + sprite_height + 5 > window_get_height()) y = window_get_height() - sprite_height
 
 
