@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\sp_p_ship_01</sprite>
     <sprite>sprites\sp_ene_ship_01</sprite>
+    <sprite>sprites\sp_ene_ship_02</sprite>
     <sprite>sprites\sp_missle_01_temp</sprite>
   </sprites>
   <backgrounds name="background">
@@ -24,6 +25,10 @@
     <script>scripts\Objects_Test.gml</script>
     <scripts name="Create_Enemies">
       <script>scripts\Create_Ene_01.gml</script>
+      <script>scripts\Create_Ene_02.gml</script>
+    </scripts>
+    <scripts name="Handle_Enemies">
+      <script>scripts\Handle_Ene_02.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -33,6 +38,7 @@
       <objects name="Enemies">
         <object>objects\obj_abs_ene_ship</object>
         <object>objects\obj_ene_01</object>
+        <object>objects\obj_ene_02</object>
       </objects>
     </objects>
     <objects name="Projectiles">

@@ -29,9 +29,69 @@
 main = instance_create(50, window_get_height() / 2, obj_main_01)
 
 global.spawn_x = window_get_width() + 5
+global.max_01 = 5
+global.max_02 = 4
 
 init = false
+twoInit = false
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(instance_number(obj_ene_02) &lt; 4){
+    create = irandom(3 - instance_number(obj_ene_02))
+    for(i = 0; i &lt; create; ++i){
+        Create_Ene_02(main)
+    }
+}
+
+alarm[3] = 50
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>while(instance_number(obj_ene_02) &lt; 4){
+    Create_Ene_02(main)
+}
+
+alarm[3] = 150
 </string>
           </argument>
         </arguments>
@@ -62,6 +122,10 @@ init = false
 }
 
 alarm[1] = 50
+if(score &gt; 450 &amp;&amp; !twoInit){
+     twoInit = true
+     alarm[2] = 100
+}
 </string>
           </argument>
         </arguments>
@@ -283,7 +347,7 @@ alarm[1] = 50
           </argument>
           <argument>
             <kind>0</kind>
-            <string>45</string>
+            <string>50</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -291,7 +355,7 @@ alarm[1] = 50
           </argument>
           <argument>
             <kind>0</kind>
-            <string>35</string>
+            <string>60</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -328,6 +392,55 @@ alarm[1] = 50
           <argument>
             <kind>0</kind>
             <string>50</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>514</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_text</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>2</kind>
+            <string>Missles: </string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>500</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>50</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_text(570, 50, string(main.missles))
+</string>
           </argument>
         </arguments>
       </action>
