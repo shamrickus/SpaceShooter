@@ -10,9 +10,11 @@
     <sprite>sprites\sp_ene_ship_01</sprite>
     <sprite>sprites\sp_ene_ship_02</sprite>
     <sprite>sprites\sp_missle_01_temp</sprite>
+    <sprite>sprites\restart_button_spr</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_main</background>
+    <background>background\game_over_bkgrd</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -46,9 +48,11 @@
       <object>objects\obj_main_missle_01</object>
     </objects>
     <object>objects\obj_director</object>
+    <object>objects\restart_button_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
+    <room>rooms\game_over_rm</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
