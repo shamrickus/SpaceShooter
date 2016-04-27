@@ -181,6 +181,10 @@ alarm[1] = 50
     background_hspeed = -3
     init = true
 }
+
+if( obj_main_01.health &lt;=0 ){
+room_goto(game_over_rm);
+}
 </string>
           </argument>
         </arguments>
