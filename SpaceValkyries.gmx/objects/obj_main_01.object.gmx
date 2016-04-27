@@ -29,6 +29,7 @@
 
 missles = 30
 health = 100
+energy = 100
 shields = 100
 </string>
           </argument>
