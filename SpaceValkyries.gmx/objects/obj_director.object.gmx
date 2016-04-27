@@ -183,7 +183,7 @@ alarm[1] = 50
     init = true
 }
 
-if( obj_main_01.health &lt;=0 ){
+if( health &lt;=0 ){
 room_goto(game_over_rm);
 }
 </string>
