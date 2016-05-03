@@ -60,7 +60,7 @@
     </objects>
     <objects name="Projectiles">
       <object>objects\obj_abs_proj</object>
-      <object>objects\obj_main_missle_01</object>
+      <object>objects\obj_main_missile_01</object>
     </objects>
     <object>objects\obj_director</object>
     <object>objects\restart_button_obj</object>
