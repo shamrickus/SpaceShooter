@@ -598,6 +598,8 @@ if( health &lt;=0 ){
 
 draw_rectangle(329, 64, 630 + 1, 86, false)
 
+draw_set_color(c_blue)
+
 length = main.energy * 3+ 330
 
 draw_rectangle(330, 65, length, 85, false)
