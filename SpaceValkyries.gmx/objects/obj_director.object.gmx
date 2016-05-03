@@ -45,6 +45,32 @@ threeInit = false
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(instance_number(obj_ene_03) &lt; 1){
+    var inst = instance_create(room_width+50, irandom(room_height), obj_ene_03)
+    
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="2">
       <action>
         <libid>1</libid>
@@ -72,7 +98,6 @@ threeInit = false
         }
     }
 }
-alarm[2] = 75;
 </string>
           </argument>
         </arguments>
@@ -102,8 +127,6 @@ alarm[2] = 75;
     }
 }
 
-test0 = instance_number(obj_ene_01)
-test1 = instance_number(obj_ene_02)
 alarm[1] = 150
 if(score &gt; 1000){
     alarm[3] = 50
