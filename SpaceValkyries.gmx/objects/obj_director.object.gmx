@@ -34,38 +34,8 @@ global.max_02 = 4
 
 init = false
 twoInit = false
+threeInit = false
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="3">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(instance_number(obj_ene_02) &lt; 4){
-    create = irandom(4 - instance_number(obj_ene_02))
-    for(j = 0; j &lt; create; j++){
-        Create_Ene_02(main)
-    }
-}
-test = instance_number(obj_ene_02)
-
-alarm[3] = 50
 </string>
           </argument>
         </arguments>
@@ -89,10 +59,9 @@ alarm[3] = 50
           <argument>
             <kind>1</kind>
             <string>while(instance_number(obj_ene_02) &lt; 4){
+    test = instance_number(obj_ene_02)
     Create_Ene_02(main)
 }
-
-alarm[3] = 150
 </string>
           </argument>
         </arguments>
@@ -116,16 +85,20 @@ alarm[3] = 150
           <argument>
             <kind>1</kind>
             <string>if(instance_number(obj_ene_01) &lt; 4){
-    create = irandom(3 - instance_number(obj_ene_01))
+    create = irandom(3 - instance_number(obj_ene_01)) + 1
     for(i = 0; i &lt; create; i++){
         Create_Ene_01(main)
     }
 }
 
-alarm[1] = 50
-if(score &gt; 450 &amp;&amp; !twoInit){
-     twoInit = true
-     alarm[2] = 100
+test0 = instance_number(obj_ene_01)
+test1 = instance_number(obj_ene_02)
+alarm[1] = 150
+if(score &gt; 1000){
+    alarm[3] = 50
+}
+else if(score &gt; 450){    
+    alarm[2] = 50
 }
 </string>
           </argument>

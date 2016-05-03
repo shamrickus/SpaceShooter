@@ -6,11 +6,20 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sp_p_ship_01</sprite>
-    <sprite>sprites\sp_ene_ship_01</sprite>
-    <sprite>sprites\sp_ene_ship_02</sprite>
-    <sprite>sprites\sp_missle_01_temp</sprite>
-    <sprite>sprites\restart_button_spr</sprite>
+    <sprites name="Ships">
+      <sprites name="Enemies">
+        <sprite>sprites\sp_ene_ship_01</sprite>
+        <sprite>sprites\sp_ene_ship_02</sprite>
+        <sprite>sprites\sp_ene_ship_03</sprite>
+      </sprites>
+      <sprite>sprites\sp_p_ship_01</sprite>
+    </sprites>
+    <sprites name="Projectiles">
+      <sprite>sprites\sp_missle_01_temp</sprite>
+    </sprites>
+    <sprites name="Buttons">
+      <sprite>sprites\restart_button_spr</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_main</background>
@@ -32,6 +41,7 @@
     <scripts name="Handle_Enemies">
       <script>scripts\Handle_Ene_02.gml</script>
     </scripts>
+    <script>scripts\Enemy_Step.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Ships">
@@ -41,6 +51,7 @@
         <object>objects\obj_abs_ene_ship</object>
         <object>objects\obj_ene_01</object>
         <object>objects\obj_ene_02</object>
+        <object>objects\obj_ene_03</object>
       </objects>
     </objects>
     <objects name="Projectiles">

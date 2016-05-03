@@ -8,27 +8,25 @@ test1 = 0
 if(name0 == "obj_main_01" && (name1 == "obj_ene_01" || name1 == "obj_ene_01")) test1 = 1
 else if((name0 == "obj_ene_01" || name0 == "obj_ene_02") && name1 == "obj_main_01") test1 =2
 
-if(test1 > 0){
-    if(test1 == 1){
-        if(arg0.energy > arg1.dmg) arg0.energy-=arg1.dmg
-        else{
-            arg1.dmg -= arg0.energy
-            arg0.energy = 0
-            arg0.health-=arg1.dmg        
-        }
-        score += arg1.points
-        with(arg1) instance_destroy()
+if(test1 == 1){
+    if(arg0.energy > arg1.dmg) arg0.energy-=arg1.dmg
+    else{
+        arg1.dmg -= arg0.energy
+        arg0.energy = 0
+        arg0.health-=arg1.dmg        
     }
-    else if(test1 == 2){
-        if(arg1.energy > arg0.dmg) arg1.energy-=arg0.dmg
-        else{
-            arg0.dmg -= arg1.energy
-            arg1.energy = 0
-            arg1.health-=arg0.dmg
-        }
-        score += arg0.points
-        with(arg0) instance_destroy()
+    score += arg1.points
+    with(arg1) instance_destroy()
+}
+else if(test1 == 2){
+    if(arg1.energy > arg0.dmg) arg1.energy-=arg0.dmg
+    else{
+        arg0.dmg -= arg1.energy
+        arg1.energy = 0
+        arg1.health-=arg0.dmg
     }
+    score += arg0.points
+    with(arg0) instance_destroy()
 }
 
 test = 0
