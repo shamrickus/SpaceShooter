@@ -594,13 +594,15 @@ if( health &lt;=0 ){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>length = main.energy * 3+ 330
+            <string>draw_set_color(c_black)
+
+draw_rectangle(329, 64, 630 + 1, 86, false)
+
+length = main.energy * 3+ 330
 
 draw_rectangle(330, 65, length, 85, false)
 
-draw_set_color(c_black)
 
-draw_rectangle(329, 64, 300 + 1, 86, true)
 </string>
           </argument>
         </arguments>
