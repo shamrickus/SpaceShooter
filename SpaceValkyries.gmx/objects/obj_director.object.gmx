@@ -88,8 +88,8 @@ threeInit = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_number(obj_ene_02) &lt; 4){
-    create = irandom(3-instance_number(obj_ene_02));
+            <string>if(instance_number(obj_ene_02) &lt; 5){
+    create = irandom(4-instance_number(obj_ene_02))+ global.difficulty;
     for(i=0;i&lt;create;++i){
         Create_Ene_02( main );
     }
@@ -121,19 +121,19 @@ if(score &gt; 1000){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_number(obj_ene_01) &lt; 4){
-    create = irandom(3 - instance_number(obj_ene_01)) + 1
+            <string>if(instance_number(obj_ene_01) &lt; 7){
+    create = irandom(6 - instance_number(obj_ene_01)) + global.difficulty
     for(i = 0; i &lt; create; i++){
         Create_Ene_01(main)
     }
 }
 
-alarm[1] = 150
+alarm[1] = 50
 if(score &gt; 1000){
-    alarm[3] = 50
+    alarm[3] = 25
 }
 else if(score &gt; 450){    
-    alarm[2] = 50
+    alarm[2] = 25
 }
 </string>
           </argument>

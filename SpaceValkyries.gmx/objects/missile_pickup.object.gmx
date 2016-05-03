@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>other.missles+=15
+            <string>other.missles+=3
 with(self) instance_destroy()
 </string>
           </argument>
