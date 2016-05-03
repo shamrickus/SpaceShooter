@@ -9,23 +9,29 @@ if(name0 == "obj_main_01" && (name1 == "obj_ene_01" || name1 == "obj_ene_02")) t
 else if((name0 == "obj_ene_01" || name0 == "obj_ene_02") && name1 == "obj_main_01") test1 =2
 
 if(test1 == 1){
-    if(arg0.energy > arg1.dmg) arg0.energy-=arg1.dmg
-    else{
-        arg1.dmg -= arg0.energy
-        arg0.energy = 0
-        arg0.health-=arg1.dmg*5        
+    if(arg0.energy > arg1.dmg){
+        arg0.energy-=arg1.dmg;
+        arg0.alarm[2] = ( 2 + global.difficulty ) * room_speed;
     }
-    score += arg1.points
+    else{
+        var dam = arg1.dmg - arg0.energy;
+        arg0.energy = 0;
+        arg0.health -= dam ;       
+    }
+    score += arg1.points * (global.difficulty + 1)  / 2
     with(arg1) instance_destroy()
 }
 else if(test1 == 2){
-    if(arg1.energy > arg0.dmg) arg1.energy-=arg0.dmg
-    else{
-        arg0.dmg -= arg1.energy
-        arg1.energy = 0
-        arg1.health-=arg0.dmg*5
+    if(arg1.energy > arg0.dmg){
+        arg1.energy-=arg0.dmg
+        arg1.alarm[2] = ( 2 + global.difficulty ) * room_speed;
     }
-    score += arg0.points
+    else{
+        var dam = arg0.dmg - arg1.energy;
+        arg1.energy = 0
+        arg1.health-= dam
+    }
+    score += arg0.points * (global.difficulty + 1)  / 2
     with(arg0) instance_destroy()
 }
 
@@ -34,8 +40,8 @@ if(name0 == "obj_main_missile_01" && (name1 == "obj_ene_01" || name1 == "obj_ene
 else if((name0 == "obj_ene_01"  || name0 == "obj_ene_02") && name1 == "obj_main_missile_01") test = 2
 
 if(test > 0){
-    if(test == 1) score += arg1.points
-    else if(test == 2) score += arg0.points
+    if(test == 1) score += arg1.points * (global.difficulty + 1) 
+    else if(test == 2) score += arg0.points * (global.difficulty + 1) 
     with(arg0) instance_destroy()
     with(arg1) instance_destroy()
 }
