@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hspeed = -7  * ( 1 + global.difficulty )
-dmg = 15 * ( 1 + global.difficulty )
+            <string>hspeed = -7
+dmg = 15
 </string>
           </argument>
         </arguments>

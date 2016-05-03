@@ -80,6 +80,10 @@
       <script>scripts\SetDig.gml</script>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font_20</font>
+    <font>fonts\font_16</font>
+  </fonts>
   <objects name="objects">
     <objects name="Ships">
       <object>objects\obj_abs_ship</object>
