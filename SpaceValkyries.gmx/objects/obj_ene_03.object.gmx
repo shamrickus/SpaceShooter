@@ -32,7 +32,6 @@ hspeed = -2
 fire = false
 tracking = false
 targetY = 0
-init = false
 </string>
           </argument>
         </arguments>
