@@ -75,12 +75,23 @@ difficulty = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if( !active ){
-    event_inherited();
+            <string>///OnClick()
+
+//activate this button and deactivate all others
+
+//deactivate other buttons
+for (var i = 0; i &lt; instance_number(obj_abs_diff_btn); i++ ){
+    ref = instance_find(obj_abs_diff_btn, i);
+    ref.active = false;
+    ref.image_index = 0;
 }
-else{
-    window_set_cursor( cr_default );
-}
+
+active = true;
+image_index = 2;
+
+
+//update difficulty
+global.difficulty = self.difficulty;
 </string>
           </argument>
         </arguments>
@@ -112,14 +123,6 @@ for (var i = 0; i &lt; instance_number(obj_abs_diff_btn); i++ ){
     ref = instance_find(obj_abs_diff_btn, i);
     ref.active = false;
     ref.image_index = 0;
-=======
-for (var i = 0; i &lt; instance_count; ++i ){
-    ref = instance_id[i];
-    if ( ref != activated_id &amp;&amp; instance_exists( ref ) &amp;&amp; ref.object_index == obj_abs_diff_btn){
-        ref.active = false;
-        ref.image_index = 0;
-    }
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; f4b7718189d66437bb1cceb6306a489fd79df614
 }
 
 active = true;
