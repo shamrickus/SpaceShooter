@@ -1,14 +1,18 @@
 main = argument0
 
-upper = 0
-lower = 0
-if(main.y + sprite_height > 0) upper = main.sprite_height
-if(main.y - main.sprite_height - main.sprite_height < window_get_height()) lower = main.sprite_height
+//find a random (empty) position
+{
+    do
+    {
+        ecks = room_width + 50 + irandom( 50 );
+        wie =  66 + irandom( room_height - 66 );
+    }
+    until( position_empty( ecks, wie ));
+}
 
-height = irandom_range(main.y + upper, main.y - main.sprite_height - lower)
+//put the enemy there
+res = instance_create( ecks, wie, obj_ene_01);
 
-if(height < 100) height = irandom_range(100, 125)
-
-res = instance_create(global.spawn_x, height, obj_ene_01)
-res.hspeed = irandom_range(-5, -10)
+//give it a random speed
+res.hspeed = irandom_range(-5 - ( global.difficulty * 2 ), -10 - ( global.difficulty * 4 ) )
 

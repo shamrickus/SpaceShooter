@@ -49,7 +49,10 @@ dmg=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>audio_play_sound(enemy_explosion_snd,100,false);
+            <string>//if this was a player kill, play a sound
+if( x &gt; ( -sprite_get_height( this ) ) ){
+    audio_play_sound_on(global.fx_emitter, enemy_explosion_snd, false, global.fx_priority);
+}
 </string>
           </argument>
         </arguments>

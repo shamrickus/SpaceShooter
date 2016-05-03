@@ -8,6 +8,7 @@
     <sound>sound\theme</sound>
     <sound>sound\game_over_snd</sound>
     <sound>sound\enemy_explosion_snd</sound>
+    <sound>sound\title_theme</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Ships">
@@ -25,8 +26,26 @@
       <sprite>sprites\restart_button_spr</sprite>
       <sprite>sprites\spr_play_button</sprite>
       <sprite>sprites\spr_settings_button</sprite>
+      <sprite>sprites\spr_up_btn</sprite>
+      <sprite>sprites\spr_down_btn</sprite>
+      <sprite>sprites\spr_back_btn</sprite>
     </sprites>
-    <sprite>sprites\title</sprite>
+    <sprites name="Settings_Display">
+      <sprite>sprites\spr_display_box</sprite>
+      <sprite>sprites\spr_fx_txt</sprite>
+      <sprite>sprites\spr_volume_txt</sprite>
+      <sprite>sprites\spr_music_txt</sprite>
+      <sprite>sprites\spr_0_txt</sprite>
+      <sprite>sprites\spr_1_txt</sprite>
+      <sprite>sprites\spr_2_txt</sprite>
+      <sprite>sprites\spr_3_txt</sprite>
+      <sprite>sprites\spr_4_txt</sprite>
+      <sprite>sprites\spr_5_txt</sprite>
+      <sprite>sprites\spr_6_txt</sprite>
+      <sprite>sprites\spr_7_txt</sprite>
+      <sprite>sprites\spr_8_txt</sprite>
+      <sprite>sprites\spr_9_txt</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_main</background>
@@ -71,12 +90,22 @@
     <objects name="Buttons">
       <object>objects\obj_play_button</object>
       <object>objects\obj_settings_button</object>
+      <object>objects\hoverbutton</object>
+      <object>objects\obj_back_btn</object>
+      <object>objects\obj_up_btn</object>
+      <object>objects\obj_down_btn</object>
+    </objects>
+    <object>objects\globalConfig_obj</object>
+    <objects name="Display">
+      <object>objects\obj_digit_txt</object>
+      <object>objects\obj_display_box</object>
+      <object>objects\obj_menuitem_txt</object>
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\title_rm</room>
     <room>rooms\rm_main</room>
     <room>rooms\game_over_rm</room>
-    <room>rooms\title_rm</room>
     <room>rooms\Settings_rm</room>
   </rooms>
   <help>

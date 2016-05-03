@@ -4,10 +4,15 @@ if(res.yDiff == 0){
     res.yDiff = irandom_range(50, 300)
     res.oldY = res.yInit
 }
-if(res.y + 65 >= room_height || res.y - 65 <=0 ){
+if(res.y + 100 >= room_height ){
     res.vspeed = -res.vspeed;
+    res.y = room_height - 101;
 }
-if(res.x <= -30){
+else if( res.y - 100 <=0 ){
+    res.vspeed = -res.vspeed;
+    res.y = 101;
+}
+if(res.x <= -50){
     with(res){
         instance_destroy();
     }

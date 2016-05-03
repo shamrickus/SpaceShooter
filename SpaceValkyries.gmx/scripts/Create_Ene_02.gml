@@ -1,10 +1,23 @@
 main = argument0
 
-height = irandom_range(200, window_get_height() + sprite_get_height(sp_ene_ship_02) + 100)
+//find a random (empty) position
+{
+    do
+    {
+        ecks = room_width + 50 + irandom( 50 );
+        wie =  101 + irandom( room_height - 101 );
+    }
+    until( position_empty( ecks, wie ));
+}
 
-res = instance_create(global.spawn_x, height, obj_ene_02)
+//put it there
+inst = instance_create( ecks, wie, obj_ene_02 );
 
-res.hspeed = irandom_range(-5, -10)
-res.vspeed = irandom_range(2, 5)
-res.yInit = height
-Handle_Ene_02(res)
+//give it some random velocity
+with( inst ){
+    hspeed = irandom_range(-5 - ( global.difficulty * 3.5 ), -10  - ( global.difficulty * 7.5 ) );
+    vspeed = irandom_range(2 + ( global.difficulty * 5 ), 5 + ( global.difficulty * 10 ) );   
+}
+
+//HANDLE IT!!!
+Handle_Ene_02(inst);
