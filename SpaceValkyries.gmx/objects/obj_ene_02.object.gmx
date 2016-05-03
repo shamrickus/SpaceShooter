@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>points = 150
-hspeed = -5
-dmg=30
+            <string>points = 150 + 25 * ( global.difficulty )
+hspeed = -irandom( 5 + 5 * ( global.difficulty ) );
+dmg=30 + 10 * ( global.difficulty );
 
 yDiff = 0
 yInit = 0

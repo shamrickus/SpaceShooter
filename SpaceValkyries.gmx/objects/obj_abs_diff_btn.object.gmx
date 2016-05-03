@@ -53,6 +53,9 @@ difficulty = 0;
             <string>if( !active ){
     event_inherited();
 }
+else{
+    window_set_cursor( cr_default );
+}
 </string>
           </argument>
         </arguments>
