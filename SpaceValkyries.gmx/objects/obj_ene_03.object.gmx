@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>hspeed = 0
 points = 300
-health = 100
+health = 100 * (1 + global.difficulty )
 hspeed = -2
 fire = false
 tracking = false
@@ -71,8 +71,8 @@ else if(init){
     }
     if(abs(ship.y - y) &gt;= 9){
             targetY = ship.y
-            if(targetY - y &gt; 0) vspeed = 4
-            else vspeed = -4
+            if(targetY - y &gt; 0) vspeed = 2 * (1 + global.difficulty )
+            else vspeed = -2 * (1+global.difficulty)
             tracking = true
         }
     if(fire){
