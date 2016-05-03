@@ -29,6 +29,8 @@ if(test1 > 0){
         score += arg0.points
         with(arg0) instance_destroy()
     }
+    score += arg0.points
+    with(arg0) instance_destroy()
 }
 
 test = 0
