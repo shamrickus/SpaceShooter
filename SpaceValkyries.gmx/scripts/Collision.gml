@@ -14,7 +14,7 @@ if(test1 > 0){
         else{
             arg1.dmg -= arg0.energy
             arg0.energy = 0
-            arg0.health-=arg1.dmg        
+            arg0.health-=arg1.dmg*5        
         }
         score += arg1.points
         with(arg1) instance_destroy()
@@ -24,7 +24,7 @@ if(test1 > 0){
         else{
             arg0.dmg -= arg1.energy
             arg1.energy = 0
-            arg1.health-=arg0.dmg
+            arg1.health-=arg0.dmg*5
         }
         score += arg0.points
         with(arg0) instance_destroy()

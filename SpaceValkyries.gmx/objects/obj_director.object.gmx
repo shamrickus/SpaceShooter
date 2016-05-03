@@ -34,6 +34,8 @@ global.max_02 = 4
 
 init = false
 twoInit = false
+ded=false
+theme_index=0
 
 </string>
           </argument>
@@ -88,11 +90,17 @@ alarm[3] = 50
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>while(instance_number(obj_ene_02) &lt; 4){
-    Create_Ene_02(main)
+            <string>if(instance_number(obj_ene_02) &lt; 4){
+    create = irandom(3-instance_number(obj_ene_02));
+    for(i=0;i&lt;create;++i){
+        var inst = instance_create(room_width+50,irandom(room_height),obj_ene_02);
+        with (inst){
+            vspeed = irandom( 40 ) - 20;
+            hspeed = irandom( 40 ) - 39;
+        }
+    }
 }
-
-alarm[3] = 150
+alarm[2] = 75;
 </string>
           </argument>
         </arguments>
@@ -181,11 +189,14 @@ alarm[1] = 50
     alarm[0] = 10
     background_hspeed = -3
     init = true
-    audio_play_sound(theme,10,true);
+    theme_index = audio_play_sound(theme,10,true);
+    audio_sound_gain(theme_index, 0.15, 0);
 }
 
 if( health &lt;=0 ){
-room_goto(game_over_rm);
+    audio_stop_all();
+    audio_play_sound(game_over_snd,10,false);
+    room_goto(game_over_rm);
 }
 </string>
           </argument>
