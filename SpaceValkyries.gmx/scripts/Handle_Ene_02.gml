@@ -8,9 +8,9 @@ if(res.y + 100 >= room_height ){
     res.vspeed = -res.vspeed;
     res.y = room_height - 101;
 }
-else if( res.y - 100 <=0 ){
+else if( res.y - 200 <=0 ){
     res.vspeed = -res.vspeed;
-    res.y = 101;
+    res.y = 201;
 }
 if(res.x <= -50){
     with(res){

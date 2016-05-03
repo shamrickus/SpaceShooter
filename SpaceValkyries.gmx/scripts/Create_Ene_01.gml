@@ -5,7 +5,7 @@ main = argument0
     do
     {
         ecks = room_width + 50 + irandom( 50 );
-        wie =  66 + irandom( room_height - 66 );
+        wie =  166 + irandom( room_height - 66 );
     }
     until( position_empty( ecks, wie ));
 }
