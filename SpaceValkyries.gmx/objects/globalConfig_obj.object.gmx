@@ -70,6 +70,7 @@ global.fx_volume = 1;
     
 //play main theme
 audio_play_sound_on( global.music_emitter, title_theme, true, global.music_priority );
+audio_emitter_gain( global.music_emitter, 0.35 * global.volume * global.music_volume );
 </string>
           </argument>
         </arguments>
