@@ -109,21 +109,17 @@ else if( image_index != 2 ){
             <string>///OnClick()
 
 //activate this button and deactivate all others
+
+//deactivate other buttons
+for (var i = 0; i &lt; instance_number(obj_abs_diff_btn); i++ ){
+    ref = instance_find(obj_abs_diff_btn, i);
+    ref.active = false;
+    ref.image_index = 0;
+}
+
 active = true;
 image_index = 2;
 
-
-//don't deactivate yourself
-var activated_id = self;
-
-//deactivate other buttons
-for (var i = 0; i &lt; instance_count; ++i ){
-    ref = instance_id[i];
-    if ( ref != activated_id &amp;&amp; instance_exists( ref ) &amp;&amp; ref.object_index = obj_abs_diff_btn){
-        ref.active = false;
-        ref.image_index = 0;
-    }
-}
 
 //update difficulty
 global.difficulty = self.difficulty;
