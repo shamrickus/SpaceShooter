@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\theme</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\sp_p_ship_01</sprite>
     <sprite>sprites\sp_ene_ship_01</sprite>

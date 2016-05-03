@@ -181,6 +181,7 @@ alarm[1] = 50
     alarm[0] = 10
     background_hspeed = -3
     init = true
+    audio_play_sound(theme,10,true);
 }
 
 if( health &lt;=0 ){
