@@ -53,9 +53,6 @@ difficulty = 0;
             <string>if( !active ){
     event_inherited();
 }
-else if( image_index != 2 ){
-    image_index = 2;
-}
 </string>
           </argument>
         </arguments>
@@ -81,8 +78,8 @@ else if( image_index != 2 ){
             <string>if( !active ){
     event_inherited();
 }
-else if( image_index != 2 ){
-    image_index = 2;
+else{
+    window_set_cursor( cr_default );
 }
 </string>
           </argument>
@@ -119,7 +116,7 @@ var activated_id = self;
 //deactivate other buttons
 for (var i = 0; i &lt; instance_count; ++i ){
     ref = instance_id[i];
-    if ( ref != activated_id &amp;&amp; instance_exists( ref ) &amp;&amp; ref.object_index = obj_abs_diff_btn){
+    if ( ref != activated_id &amp;&amp; instance_exists( ref ) &amp;&amp; ref.object_index == obj_abs_diff_btn){
         ref.active = false;
         ref.image_index = 0;
     }

@@ -72,8 +72,8 @@ switch( button_id ){
         }
         
         //immediately update the sound
-        audio_emitter_gain( global.music_emitter, global.volume * global.music_volume );
-        audio_emitter_gain( global.fx_emitter, global.volume * global.fx_volume );
+        audio_emitter_gain( global.music_emitter, 0.35 * global.volume * global.music_volume );
+        audio_emitter_gain( global.fx_emitter, 0.35 * global.volume * global.fx_volume );
         
         
         break;
@@ -89,7 +89,7 @@ switch( button_id ){
         }
         
         //immediately update the sound
-        audio_emitter_gain( global.music_emitter, global.volume * global.music_volume );
+        audio_emitter_gain( global.music_emitter, 0.35 * global.volume * global.music_volume );
         
         break;
         
@@ -104,7 +104,7 @@ switch( button_id ){
         }
         
         //immediately update the sound
-        audio_emitter_gain( global.fx_emitter, global.volume * global.fx_volume );
+        audio_emitter_gain( global.fx_emitter, 0.35 * global.volume * global.fx_volume );
         
         
         break;
