@@ -32,30 +32,7 @@ hspeed = -2
 fire = false
 tracking = false
 targetY = 0
-init = false
 </string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string></string>
           </argument>
         </arguments>
       </action>
@@ -63,49 +40,41 @@ init = false
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>if(x + sprite_width - 5 &lt;= window_get_width() &amp;&amp; !init){
-    hspeed = 0
-    init = true
-    ship = instance_find(obj_main_01, 0)
-    targetY = ship.y
-}
-else if(init){
-    if(abs(targetY - self.y) &lt; 9){
-        fire = true
-        tracking = false
-    }
-    else if(!tracking &amp;&amp; !fire){
-        ship = instance_find(obj_main_01, 0)
-        
-        
-        if(abs(targetY - y) &gt;= 9){
-            targetY = ship.y
-            if(targetY - y &gt; 0) vspeed = 4
-            else vspeed = -4
-            tracking = true
-        }
-    }
-    if(fire){
-        //fire missle!
-        fire = false
-        tracking = false
-    }
-}
-</string>
+            <kind>9</kind>
+            <script>Handle_Ene_03</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>self</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>

@@ -85,7 +85,7 @@ global.difficulty = difficulty;
             <kind>1</kind>
             <string>if( global.difficulty = difficulty ){
     active = true;
-    image_index = 0;
+    image_index = 2;
 }
 </string>
           </argument>
