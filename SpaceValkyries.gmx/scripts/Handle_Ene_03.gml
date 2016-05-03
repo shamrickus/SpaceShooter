@@ -1,4 +1,4 @@
-if(x + sprite_width <= window_get_width()){
+if(x + sprite_width - 5 <= window_get_width()){
     hspeed = 0
     if(targetY - y > -9 && targetY - y < 9){
         fire = true
@@ -8,8 +8,8 @@ if(x + sprite_width <= window_get_width()){
         ship = instance_find(obj_main_01, 0)
         targetY = ship.y
         
-        if(targetY - y > 0) vspeed = 5
-        else vspeed = -5
+        if(targetY - y > 0) vspeed = 4
+        else vspeed = -4
         tracking = true
     }
     if(fire){
