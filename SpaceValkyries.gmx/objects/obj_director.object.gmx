@@ -91,12 +91,13 @@ threeInit = false
             <string>if(instance_number(obj_ene_02) &lt; 4){
     create = irandom(3-instance_number(obj_ene_02));
     for(i=0;i&lt;create;++i){
-        var inst = instance_create(room_width+50,irandom(room_height),obj_ene_02);
-        with (inst){
-            vspeed = irandom( 40 ) - 20;
-            hspeed = irandom( 40 ) - 39;
-        }
+        Create_Ene_02( main );
     }
+}
+
+alarm[2] = 150
+if(score &gt; 1000){
+    alarm[3] = 50
 }
 </string>
           </argument>
