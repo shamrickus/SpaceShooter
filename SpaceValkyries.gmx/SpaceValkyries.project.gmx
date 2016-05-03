@@ -23,11 +23,15 @@
     </sprites>
     <sprites name="Buttons">
       <sprite>sprites\restart_button_spr</sprite>
+      <sprite>sprites\spr_play_button</sprite>
+      <sprite>sprites\spr_settings_button</sprite>
     </sprites>
+    <sprite>sprites\title</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_main</background>
     <background>background\game_over_bkgrd</background>
+    <background>background\title_screen</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -64,10 +68,16 @@
     </objects>
     <object>objects\obj_director</object>
     <object>objects\restart_button_obj</object>
+    <objects name="Buttons">
+      <object>objects\obj_play_button</object>
+      <object>objects\obj_settings_button</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
     <room>rooms\game_over_rm</room>
+    <room>rooms\title_rm</room>
+    <room>rooms\Settings_rm</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
