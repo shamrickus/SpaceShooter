@@ -21,6 +21,7 @@
     </sprites>
     <sprites name="Projectiles">
       <sprite>sprites\sp_missle_01_temp</sprite>
+      <sprite>sprites\sp_missle_02</sprite>
     </sprites>
     <sprites name="Buttons">
       <sprite>sprites\restart_button_spr</sprite>
@@ -50,6 +51,7 @@
       <sprite>sprites\spr_9_txt</sprite>
       <sprite>sprites\spr_difficulty_txt</sprite>
     </sprites>
+    <sprite>sprites\pickup</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_main</background>
@@ -92,6 +94,7 @@
     <objects name="Projectiles">
       <object>objects\obj_abs_proj</object>
       <object>objects\obj_main_missile_01</object>
+      <object>objects\obj_ene_missile_01</object>
     </objects>
     <object>objects\obj_director</object>
     <object>objects\restart_button_obj</object>
@@ -114,6 +117,7 @@
       <object>objects\obj_menuitem_txt</object>
       <object>objects\obj_difficulty_txt</object>
     </objects>
+    <object>objects\missile_pickup</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title_rm</room>
