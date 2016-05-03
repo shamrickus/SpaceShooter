@@ -29,6 +29,9 @@
       <sprite>sprites\spr_up_btn</sprite>
       <sprite>sprites\spr_down_btn</sprite>
       <sprite>sprites\spr_back_btn</sprite>
+      <sprite>sprites\spr_ez_btn</sprite>
+      <sprite>sprites\spr_med_btn</sprite>
+      <sprite>sprites\spr_hard_btn</sprite>
     </sprites>
     <sprites name="Settings_Display">
       <sprite>sprites\spr_display_box</sprite>
@@ -45,6 +48,7 @@
       <sprite>sprites\spr_7_txt</sprite>
       <sprite>sprites\spr_8_txt</sprite>
       <sprite>sprites\spr_9_txt</sprite>
+      <sprite>sprites\spr_difficulty_txt</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -97,12 +101,17 @@
       <object>objects\obj_back_btn</object>
       <object>objects\obj_up_btn</object>
       <object>objects\obj_down_btn</object>
+      <object>objects\obj_abs_diff_btn</object>
+      <object>objects\obj_ez_btn</object>
+      <object>objects\obj_med_btn</object>
+      <object>objects\obj_hard_btn</object>
     </objects>
     <object>objects\globalConfig_obj</object>
     <objects name="Display">
       <object>objects\obj_digit_txt</object>
       <object>objects\obj_display_box</object>
       <object>objects\obj_menuitem_txt</object>
+      <object>objects\obj_difficulty_txt</object>
     </objects>
   </objects>
   <rooms name="rooms">
