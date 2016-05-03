@@ -55,24 +55,24 @@
     <instance objName="obj_display_box" x="416" y="112" name="inst_E7AF3D3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_display_box" x="416" y="272" name="inst_FA646971" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_display_box" x="416" y="432" name="inst_BE90B756" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_digit_txt" x="480" y="448" name="inst_0267169E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_digit_txt" x="480" y="448" name="inst_0267169E" locked="0" code="digid = 3;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_menuitem_txt" x="160" y="128" name="inst_BE2CDB2B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_menuitem_txt" x="160" y="288" name="inst_3B150E58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_menuitem_txt" x="160" y="448" name="inst_749FDE16" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_up_btn" x="256" y="96" name="inst_9C1BABDE" locked="0" code="" scaleX="0.506493508815765" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="obj_up_btn" x="256" y="256" name="inst_25EC4920" locked="0" code="" scaleX="0.506493508815765" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="obj_up_btn" x="256" y="416" name="inst_EA52C907" locked="0" code="" scaleX="0.506493508815765" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="obj_down_btn" x="256" y="352" name="inst_6CF06644" locked="0" code="" scaleX="0.493506491184235" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="obj_down_btn" x="256" y="192" name="inst_053AA067" locked="0" code="" scaleX="0.493506491184235" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="obj_down_btn" x="256" y="512" name="inst_9746D313" locked="0" code="" scaleX="0.538461565971375" scaleY="0.514705896377563" colour="4294967295" rotation="0"/>
-    <instance objName="obj_digit_txt" x="456" y="448" name="inst_2AE55D30" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_digit_txt" x="432" y="448" name="inst_F00E4FEC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_digit_txt" x="480" y="288" name="inst_BE13AC19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_digit_txt" x="456" y="288" name="inst_84859A96" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_digit_txt" x="432" y="288" name="inst_E42C83F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_digit_txt" x="480" y="128" name="inst_C452A344" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_digit_txt" x="456" y="128" name="inst_300C3791" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_digit_txt" x="432" y="128" name="inst_4F7AEDFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_menuitem_txt" x="160" y="288" name="inst_3B150E58" locked="0" code="sprite_index = spr_music_txt;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_menuitem_txt" x="160" y="448" name="inst_749FDE16" locked="0" code="sprite_index = spr_fx_txt;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_up_btn" x="256" y="96" name="inst_9C1BABDE" locked="0" code="ubtnid = 1;&#xA;" scaleX="0.506493508815765" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_up_btn" x="256" y="256" name="inst_25EC4920" locked="0" code="ubtnid = 2&#xA;" scaleX="0.506493508815765" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_up_btn" x="256" y="416" name="inst_EA52C907" locked="0" code="ubtnid = 3&#xA;" scaleX="0.506493508815765" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_down_btn" x="256" y="352" name="inst_6CF06644" locked="0" code="dbtnid = 2" scaleX="0.493506491184235" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_down_btn" x="256" y="192" name="inst_053AA067" locked="0" code="dbtnid = 1&#xA;" scaleX="0.493506491184235" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_down_btn" x="256" y="512" name="inst_9746D313" locked="0" code="dbtnid = 3;&#xA;" scaleX="0.538461565971375" scaleY="0.514705896377563" colour="4294967295" rotation="0"/>
+    <instance objName="obj_digit_txt" x="456" y="448" name="inst_2AE55D30" locked="0" code="digid = 30;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_digit_txt" x="432" y="448" name="inst_F00E4FEC" locked="0" code="digid = 300;//set id for ease of use&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_digit_txt" x="480" y="288" name="inst_BE13AC19" locked="0" code="digid = 2;// set id for ease of use" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_digit_txt" x="456" y="288" name="inst_84859A96" locked="0" code="digid = 20;// set id for ease of use&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_digit_txt" x="432" y="288" name="inst_E42C83F4" locked="0" code="digid = 200;//set id for ease of use&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_digit_txt" x="480" y="128" name="inst_C452A344" locked="0" code="digid = 1;//set id for ease of use&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_digit_txt" x="456" y="128" name="inst_300C3791" locked="0" code="digid = 10;//set id for ease of use&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_digit_txt" x="432" y="128" name="inst_4F7AEDFC" locked="0" code="digid = 100;//id for ease of use&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

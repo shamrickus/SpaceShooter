@@ -69,6 +69,9 @@
       <script>scripts\Handle_Ene_02.gml</script>
     </scripts>
     <script>scripts\Enemy_Step.gml</script>
+    <scripts name="Settings">
+      <script>scripts\SetDig.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Ships">
@@ -106,7 +109,7 @@
     <room>rooms\title_rm</room>
     <room>rooms\rm_main</room>
     <room>rooms\game_over_rm</room>
-    <room>rooms\Settings_rm</room>
+    <room>rooms\settings_rm</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

@@ -7,7 +7,143 @@
   <persistent>0</persistent>
   <parentName>hoverbutton</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ubtnid</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///obj_up_btn.OnClick()
+
+var updated = false; //for efficiency purposes, only update if a volume changed
+
+var button_id = ubtnid; //useful for scoping reasons
+
+//update the appropriate volume
+switch( button_id ){
+
+
+    //master
+    case global.vol_ubtn:
+        
+        //don't set above 100%!
+        if( global.volume != 1 ){
+            global.volume += 0.01;
+            updated = true;
+        }
+        
+        //immediately update the sound
+        audio_emitter_gain( global.music_emitter, global.volume * global.music_volume );
+        audio_emitter_gain( global.fx_emitter, global.volume * global.fx_volume );
+        
+        
+        break;
+        
+        
+    //music
+    case global.mus_ubtn:
+    
+        //don't set above 100%!
+        if( global.music_volume != 1 ){
+            global.music_volume += 0.01;
+            updated = true;
+        }
+        
+        //immediately update the sound
+        audio_emitter_gain( global.music_emitter, global.volume * global.music_volume );
+        
+        break;
+        
+        
+    //sound fx
+    case global.fx_ubtn:
+    
+        //don't set above 100%!
+        if( global.fx_volume != 1 ){
+            global.fx_volume += 0.01;
+            updated = true;
+        }
+        
+        
+        //immediately update the sound
+        audio_emitter_gain( global.fx_emitter, global.volume * global.fx_volume );
+        
+        break;
+        
+    //null
+    default:
+        //pls no
+        break;
+}
+
+
+//if the value was actually changed, we have some things to do
+if( updated ){
+     /****************
+     update the digits
+     ****************/
+     
+     
+     //store the reference
+     with ( obj_digit_txt ) do{
+         
+         //check if this is one of the things we're looking for
+         //(uses 'vol' values, but works generically for master, mus, and fx)
+         if( digid / button_id == global.vol_odig ){
+             SetDig( self );
+         }
+         else if( digid / button_id == global.vol_tdig ){
+             SetDig( self );
+         }
+         else if( digid / button_id == global.vol_hdig ){
+             SetDig( self );
+         }
+     }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>

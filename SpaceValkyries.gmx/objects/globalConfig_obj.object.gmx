@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="7" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//create audio channels
+            <string>global.seen_settings = false; //used to check if the default settings need to be used
+// this is mostly for speediness
+
+
+//create audio channels
 global.music_emitter = audio_emitter_create();
 global.fx_emitter = audio_emitter_create();
 global.music_priority = 0;
@@ -36,7 +40,34 @@ global.difficulty = 0;
 global.volume = 1;
 global.music_volume = 1;
 global.fx_volume = 1;
-
+    
+    /****************************
+         Settings menu setup
+    ****************************/
+    //set some macros to easily recognize certain settings items
+    global.vol = 1;
+    global.vol_ubtn = 1;
+    global.vol_dbtn = 1;
+    global.mus = 2;
+    global.mus_ubtn = 2;
+    global.mus_dbtn = 2;
+    global.fx = 3;
+    global.fx_ubtn = 3;
+    global.fx_dbtn = 3;
+    global.vol_hdig = 100;
+    global.vol_tdig = 10;
+    global.vol_odig = 1;
+    global.mus_hdig = 200;
+    global.mus_tdig = 20;
+    global.mus_odig = 2;
+    global.fx_hdig = 300;
+    global.fx_tdig = 30;
+    global.fx_odig = 3;
+    
+    /****************************
+          End Settings setup
+    ****************************/
+    
 //play main theme
 audio_play_sound_on( global.music_emitter, title_theme, true, global.music_priority );
 </string>
